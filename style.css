@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url("/img/galaxy.jpeg") no-repeat;
+    background-size:cover !important;
+    background-attachment: fixed;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+
+.container .content h1, h2{
+    color: white;
+    margin: 20px 0;
+}
+
+#inputText{
+    height: 30vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.685);
+    border: none;
+    color: white;
+    padding: 20px;
+    font-size: 12pt;
+    font-weight: bold;
+    box-shadow: 3px 3px 3px 5px #fff;
+}
+textarea:focus{
+    outline: none;
+}
+
+#output{
+    background: rgba(0, 0, 0, 0.685);
+    height: 30vh;
+    width: 100%;
+    border: 2px solid rgb(255, 255, 255);
+    color: white;
+    padding: 20px;
+    font-size: 12pt;
+    font-weight: bold;
+}
+#translateBtn{
+    width: 20%;
+    height: 50px;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.685);
+    color: white;
+    margin-top: 20px;
+    font-size: 10pt;
+    font-weight: bold;
+}
+#translateBtn:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .container{
+        display: block;
+        text-align: center;
+    }
+}
