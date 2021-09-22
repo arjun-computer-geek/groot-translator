@@ -13,7 +13,6 @@ const errorHandler = (error) => {
 
 
 const handleClick = () => {
-    
     fetch(apiUrl)
         .then(response => response.json())
         .then(json => {
