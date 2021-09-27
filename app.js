@@ -1,9 +1,6 @@
-var inputText = document.querySelector('#inputText').value;
 var translateBtn = document.querySelector('#translateBtn');
 var output = document.querySelector('#output');
 
-
-var apiUrl = `https://api.funtranslations.com/translate/groot.json?text=${inputText}`;
 
 const errorHandler = (error) => {
 
@@ -13,12 +10,14 @@ const errorHandler = (error) => {
 
 
 const handleClick = () => {
+    var inputText = document.querySelector('#inputText').value;
+    var apiUrl = `https://api.funtranslations.com/translate/groot.json?text=${inputText}`;
     fetch(apiUrl)
         .then(response => response.json())
         .then(json => {
             output.innerText = json.contents.translated;
             })
-        .catch(errorHandler)
+        .catch((error) => errorHandler(error))
 }
 
 translateBtn.addEventListener('click', handleClick)
